@@ -1,0 +1,23 @@
+<h1>クイズ一覧画面</h1>
+
+<% @questions.limit(1).each do |question| %>
+  <iframe width="280" height="165" src="https://www.youtube.com/embed/<%= question.youtube_id %>?controls=0&amp;start=<%= question.youtube_start_time %>&end=<%= question.youtube_end_time %>&autoplay=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<% end %>
+
+<div>
+<button class="btn btn btn-neutral"><%= link_to "Easy", difficulty_questions_path('easy') %></button>
+<button class="btn"><%= link_to "Normal", difficulty_questions_path('normal') %></button>
+<button class="btn"><%= link_to "Difficult", difficulty_questions_path('difficult') %></button>
+</div>
+
+</button>
+<button class="btn"></button>
+<div>
+<button class="btn btn-primary rounded-full">
+  daisyUI Button
+</button>
+
+<button class="bg-indigo-600 px-4 py-3 text-center text-sm font-semibold inline-block text-white cursor-pointer uppercase transition duration-200 ease-in-out rounded-md hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95">
+  Tailwind Button
+</button>
+</div>
